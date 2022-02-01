@@ -1,0 +1,39 @@
+#include<stdio.h>
+struct student 
+{
+    int rn;
+    char n[10];
+    int m[5];
+    
+}s[30];
+int main()
+{
+    int i,j,tot;
+    for(j=0;j<30;j++)
+    {
+        printf("\n Enter the roll no =  ");
+        scanf("%d",&s[j].rn);
+        printf("\n Enter the name = ");
+        scanf("%s",s[j].n);
+        for(i=0;i<5;i++)
+        {
+            printf("\nEnter the marks = ");
+            scanf("\n%d",&s[j].m[i]);
+        }
+    }
+    for(j=0;j<30;j++)
+    {
+        tot=0;
+        printf("\n Your rn is = %d",s[j].rn);
+        printf("\n Your name is = %s",s[j].n);
+        for(i=0;i<5;i++)
+        {
+            printf("\n your marks is = %d",s[j].m[i]);
+            tot+=s[j].m[i];
+        }
+        printf("\n Your total of marks is = %d",tot);
+    }
+        return 0;
+    
+        
+    }
